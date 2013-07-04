@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+    	<title>Select Geometry</title>
+        <style type="text/css" rel="stylesheet">
+		body
+		{
+			background-color:#b0c4de;
+		}
+		.a
+		{
+			text-align:center;
+		}
+		#b
+		{
+			position:absolute;
+			left:25px;
+		}
+        </style>
+        <script type="text/javascript" >
+		function choose()
+		{
+			
+			if(!(document.forms[0].speed.value>0 && document.forms[0].speed.value<=100))
+			{
+				window.alert("Enter a value from 1 to 100");
+				document.forms[0].speed.value="";
+				die();
+			}
+			else
+			{}
+			if(document.forms[0].geometry[0].checked)
+			{
+				document.forms[0].action="Circle.html";
+				var data="&speed="+document.forms[0].speed.value;
+				top.location.href="Circle.html"+"?"+data;
+			}
+			else if(document.forms[0].geometry[1].checked)
+			{
+				var data="&speed="+document.forms[0].speed.value;
+				top.location.href="Square.html"+"?"+data;
+			}
+			else
+			{}							
+		}
+		</script>
+    </head>
+    <body>
+    	<div class="a">
+        	<h2>Hacker Mode</h2>
+        </div><hr/><hr/>
+        <div id="b">
+        	<p><strong>Choose the desired geometry:-
+            <form method="POST" action="Circle.html">
+            <input type="radio" name="geometry" id="circle" checked="checked" />
+            <label for="circle">:Circle</label> <br/>
+            <input type="radio" name="geometry" id="square" />
+            <label for="square">:Square</label> </strong><br/></p>
+            <p><strong>Choose the speed of movement:- <br/>
+            <input type="number" name="speed" id="speed" required="required"/><br/>
+            <input type="button" onClick="choose()" value="View" />
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+body
+	{
+		background-color:#b0c4de;
+	}
+#dot, #dot_1,#dot_2
+	{
+        position:absolute;
+        background-color:red;
+        border-radius:50%;
+		width:11px;
+        height:11px;
+		left:500px;
+		top:300px;
+	}
+#dot_1
+	{
+		width:23px;
+		height:23px;
+		left:-6px;
+		top:-6px;
+		opacity:0.5;
+		filter:alpha(opacity=50);
+	}
+#dot_2
+	{
+		width:61px;
+		height:61px;
+		left:-25px;
+		top:-25px;
+		opacity:0.05;
+		filter:alpha(opacity=5);
+	}
